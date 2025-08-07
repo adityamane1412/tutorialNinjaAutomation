@@ -14,7 +14,7 @@ public class Util {
 
     public static WebDriver driver;
 
-    public static final String getXpath(final String pagename, final String elementlocator) {
+    public static final String getXpath(final String pagename, final String genericdatakey) {
 
         Properties properties = new Properties();
         String propertyFile = pagename + ".properties";
@@ -26,13 +26,10 @@ public class Util {
             } else {
                 throw new FileNotFoundException("File Not Found " + propertyFile);
             }
-            return properties.getProperty(elementlocator);
+            return properties.getProperty(genericdatakey);
         } catch (IOException e) {
             e.printStackTrace();
         }
         return  null;
     }
-
-
-
 }
