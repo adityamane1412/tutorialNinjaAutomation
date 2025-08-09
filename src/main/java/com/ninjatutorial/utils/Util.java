@@ -14,19 +14,18 @@ public class Util {
 
     public static WebDriver driver;
 
-    public static final String getXpath(final String pagename, final String genericdatakey) {
+    public static final String getXpath(final String pagename, final String elementlocator) {
 
         Properties properties = new Properties();
         String propertyFile = pagename + ".properties";
         try (InputStream fis = Util.class.getClassLoader().getResourceAsStream(propertyFile)) {
 
             if(null != fis) {
-                log.info("Loading properties");
                 properties.load(fis);
             } else {
                 throw new FileNotFoundException("File Not Found " + propertyFile);
             }
-            return properties.getProperty(genericdatakey);
+            return properties.getProperty(elementlocator);
         } catch (IOException e) {
             e.printStackTrace();
         }
