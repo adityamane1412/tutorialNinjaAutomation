@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "C:/Users/adity/IdeaProjects/tutorialNinjaAutomation/src/test/resources/stories/login.feature",
+        features = "C:\\Users\\adity\\IdeaProjects\\tutorialNinjaAutomation\\src\\test\\resources\\stories\\order.feature",
         glue= "com.ninjatutorial.stepdefination",
         dryRun = false,
         monochrome = true,

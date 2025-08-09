@@ -21,7 +21,6 @@ public class Util {
         try (InputStream fis = Util.class.getClassLoader().getResourceAsStream(propertyFile)) {
 
             if(null != fis) {
-                log.info("Loading properties");
                 properties.load(fis);
             } else {
                 throw new FileNotFoundException("File Not Found " + propertyFile);
@@ -32,7 +31,4 @@ public class Util {
         }
         return  null;
     }
-
-
-
 }
